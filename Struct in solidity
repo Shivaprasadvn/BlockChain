@@ -1,0 +1,19 @@
+//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.8;
+
+contract SimpleStorage{
+    uint256 public favouritenumber;
+    People public person = People({favnum:5,name:"shiva"});
+
+    struct People {
+        uint256 favnum;
+        string name;
+    }
+    function store(uint256 storenumber) public{
+        favouritenumber=storenumber;
+    }
+
+    function retrive() public view returns(uint256){
+        return favouritenumber;
+    }
+}
