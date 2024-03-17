@@ -6,4 +6,8 @@ contract SimpleStorage{
     function store(uint256 storenumber) public{
         favouritenumber=storenumber;
     }
+
+    function retrive() public view returns(uint256){
+        return favouritenumber;
+    }
 }
